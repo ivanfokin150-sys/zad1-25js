@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ivan Fokin</title>
+</head>
+<body>
+<div style="color:red;font-size:40px;" id="wynik_fok"></div>
+<script language="JavaScript">
+var N0_fok = parseFloat(prompt("Podaj początkową ilość atomów N0:"));
+var t_fok = parseFloat(prompt("Podaj czas t w latach:"));
+var T12_fok = parseFloat(prompt("Podaj okres połowicznego zaniku T1/2 w latach:"));
+var lambda_fok = Math.log(2) / T12_fok;
+var N_fok = N0_fok * Math.pow(Math.E, - lambda_fok * t_fok);
+document.getElementById("wynik_fok").innerHTML = "N0 = "+N0_fok+" [sztuk]<br>t = "+t_fok+" [lat]<br>T1/2 = "+T12_fok+" [lat]<br>Lambda = "+lambda_fok.toFixed(7)+" [1/rok]<br>N = "+N_fok.toFixed(7)+" [sztuk]";
+    </script>
+
+  </body>
+</html>
